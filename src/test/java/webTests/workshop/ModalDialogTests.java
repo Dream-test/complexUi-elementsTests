@@ -1,7 +1,6 @@
-package webTests;
+package webTests.workshop;
 
 import com.codeborne.selenide.*;
-import com.codeborne.selenide.selector.ByTagAndText;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
