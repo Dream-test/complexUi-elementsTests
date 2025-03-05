@@ -1,4 +1,4 @@
-package webTests;
+package webTests.workshop;
 
 import com.codeborne.selenide.*;
 import org.junit.jupiter.api.*;
