@@ -7,7 +7,7 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.*;
-import static webTests.utils.CastomActions.*;
+import static webTests.utils.CustomActions.*;
 
 public class HoverEffectCustomTest {
     @BeforeAll

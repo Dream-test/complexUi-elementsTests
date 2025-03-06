@@ -9,8 +9,8 @@ import webTests.Pages.ToolTipsPage;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
-import static webTests.utils.CastomActions.hoverAndWaitForTooltip;
-import static webTests.utils.CastomActions.verifyHoverEffect;
+import static webTests.utils.CustomActions.hoverAndWaitForTooltip;
+import static webTests.utils.CustomActions.verifyHoverEffect;
 
 public class ToolTipsPageTest {
     private final String url = "https://demoqa.com/tool-tips";
