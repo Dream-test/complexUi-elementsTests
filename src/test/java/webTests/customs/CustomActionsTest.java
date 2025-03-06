@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
-import static webTests.utils.CastomActions.*;
+import static webTests.utils.CustomActions.*;
 
 
 public class CustomActionsTest {private final String url = "https://www.booking.com/";

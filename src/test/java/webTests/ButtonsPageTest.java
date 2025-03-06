@@ -8,7 +8,7 @@ import webTests.Pages.ButtonsPage;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
-import static webTests.utils.CastomActions.*;
+import static webTests.utils.CustomActions.*;
 
 public class ButtonsPageTest {
     private final String url = "https://demoqa.com/buttons";

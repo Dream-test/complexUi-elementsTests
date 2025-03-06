@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 
-public class CastomActions {
+public class CustomActions {
 
     public static void waitForVisibilityAndClick(SelenideElement element) {
         element.should(exist);
@@ -53,14 +53,12 @@ public class CastomActions {
 
         element.hover();
 
-        sleep(2000);
         element.shouldHave(cssValue("background-color", expectedColor));
         element.shouldNotHave(cssValue("background-color", originalBackground));
     }
 
     public static void hoverAndWaitForTooltip(SelenideElement element, SelenideElement tooltip) {
         element.hover();
-        sleep(2000);
         tooltip.shouldBe(visible);
     }
 
