@@ -1,12 +1,11 @@
 package webTests.utils;
 
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import net.bytebuddy.implementation.bytecode.ShiftRight;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 
 public class CastomActions {
 
@@ -54,12 +53,14 @@ public class CastomActions {
 
         element.hover();
 
+        sleep(2000);
         element.shouldHave(cssValue("background-color", expectedColor));
         element.shouldNotHave(cssValue("background-color", originalBackground));
     }
 
     public static void hoverAndWaitForTooltip(SelenideElement element, SelenideElement tooltip) {
         element.hover();
+        sleep(2000);
         tooltip.shouldBe(visible);
     }
 
