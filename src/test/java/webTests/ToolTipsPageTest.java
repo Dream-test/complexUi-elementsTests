@@ -1,12 +1,16 @@
 package webTests;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.*;
 import webTests.Pages.ToolTipsPage;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static webTests.utils.CastomActions.hoverAndWaitForTooltip;
+import static webTests.utils.CastomActions.verifyHoverEffect;
 
 public class ToolTipsPageTest {
     private final String url = "https://demoqa.com/tool-tips";
@@ -38,6 +42,12 @@ public class ToolTipsPageTest {
     @Test
     public void hoverMeButtonTooltipTest() {
         ToolTipsPage toolTipsPage = new ToolTipsPage();
+        toolTipsPage.isToolTipsPageLoaded();
+
+        SelenideElement hoverMeButton = toolTipsPage.getHoverMeButton();
+        hoverMeButton.shouldBe(visible).shouldHave(Condition.text("Hover me to see"));
+
+        verifyHoverEffect(toolTipsPage.getHoverMeButton(), "rgba(33, 136, 56, 1)");
 
         hoverAndWaitForTooltip(toolTipsPage.getHoverMeButton(), toolTipsPage.getTooltipElement());
     }
@@ -45,6 +55,7 @@ public class ToolTipsPageTest {
     @Test
     public void hoverMeFieldTooltipTest() {
         ToolTipsPage toolTipsPage = new ToolTipsPage();
+        toolTipsPage.isToolTipsPageLoaded();
 
         hoverAndWaitForTooltip(toolTipsPage.getHoverMeField(), toolTipsPage.getTooltipElement());
     }
@@ -52,6 +63,7 @@ public class ToolTipsPageTest {
     @Test
     public void hoverContraryElementTest() {
         ToolTipsPage toolTipsPage = new ToolTipsPage();
+        toolTipsPage.isToolTipsPageLoaded();
 
         hoverAndWaitForTooltip(toolTipsPage.getContraryElement(), toolTipsPage.getTooltipElement());
     }
@@ -59,6 +71,7 @@ public class ToolTipsPageTest {
     @Test
     public void hoverNumberElementTest() {
         ToolTipsPage toolTipsPage = new ToolTipsPage();
+        toolTipsPage.isToolTipsPageLoaded();
 
         hoverAndWaitForTooltip(toolTipsPage.getNumberElement(), toolTipsPage.getTooltipElement());
     }

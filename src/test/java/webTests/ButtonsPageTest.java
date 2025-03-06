@@ -3,7 +3,6 @@ package webTests;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.*;
 import webTests.Pages.ButtonsPage;
 
@@ -41,6 +40,8 @@ public class ButtonsPageTest {
     @Test
     public void doubleClickButtonTest() {
         ButtonsPage buttonsPage = new ButtonsPage();
+        buttonsPage.isButtonPageLoaded();
+
         waitForVisibilityAndDoubleClick(buttonsPage.getDoubleClickButton());
 
         buttonsPage.getDoubleClickMessage()
@@ -51,6 +52,8 @@ public class ButtonsPageTest {
     @Test
     public void rightClickButtonTest() {
         ButtonsPage buttonsPage = new ButtonsPage();
+        buttonsPage.isButtonPageLoaded();
+
         waitForVisibilityAndRightClick(buttonsPage.getRightClickButton());
 
         buttonsPage.getRightClickMessage()
@@ -61,6 +64,8 @@ public class ButtonsPageTest {
     @Test
     public void oneClickButtonTest() {
         ButtonsPage buttonsPage = new ButtonsPage();
+        buttonsPage.isButtonPageLoaded();
+
         waitForVisibilityAndClick(buttonsPage.getOneClickButton());
 
         buttonsPage.getOneClickMessage()
