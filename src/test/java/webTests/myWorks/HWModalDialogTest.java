@@ -1,4 +1,4 @@
-package webTests;
+package webTests.myWorks;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selectors;
